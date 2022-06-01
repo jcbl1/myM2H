@@ -95,7 +95,7 @@ func MDtoHTML(filename string)(string,error){
 		}else if strings.HasPrefix(t,"[[blockVideo]]"){
 			linkTitle, link,_:=strings.Cut(strings.TrimPrefix(strings.TrimSuffix(t,")"),"[[blockVideo]]["),"](")
 			mainSec+=`
-				<video class="blockVideo" src="`+link+`" title="`+linkTitle+`"></video>
+				<video class="blockVideo" src="`+link+`" title="`+linkTitle+`" controls preload="auto"></video>
 			`
 		} else {
 			mainSec += `
