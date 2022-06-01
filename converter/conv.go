@@ -92,6 +92,11 @@ func MDtoHTML(filename string)(string,error){
 			mainSec += `
 				<img class="blockImg" src="` + link + `" alt="` + linkTitle + `">
 			`
+		}else if strings.HasPrefix(t,"[[blockVideo]]"){
+			linkTitle, link,_:=strings.Cut(strings.TrimPrefix(strings.TrimSuffix(t,")"),"[[blockVideo]]["),"](")
+			mainSec+=`
+				<video class="blockVideo" src="`+link+`" title="`+linkTitle+`"></video>
+			`
 		} else {
 			mainSec += `
 				<p class="normalP">` + t + `</p>
