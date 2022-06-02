@@ -43,7 +43,7 @@ func MDtoHTML(filename string)(string,error){
 		<h1 class="titleHeader">` + ai.title + `</h1>
 		<div id="info">
 			<img class="avatar" src="" alt="">
-			<p class="author tidy" onclick="window.open('https://blog.gool.work/u/` + ai.author + `')">` + ai.author + `</p>
+			<p class="author tidy" tabindex="0" onclick="window.open('https://blog.gool.work/u/` + ai.author + `')">` + ai.author + `</p>
 			<p class="modified tidy">` + strconv.Itoa(y) + "-" + strconv.Itoa(int(m)) + "-" + strconv.Itoa(d) + `</p>
 			<img class="tagIcon" src="" alt="">
 	`
@@ -84,7 +84,7 @@ func MDtoHTML(filename string)(string,error){
 			mainSec += `
 				<div class="clipBlock">
 					<img class="` + linkType + `" src="" alt="">
-					<p class="tidy" onclick="window.open('` + link + `','_blank')">` + linkTitle + `</p>
+					<p class="tidy" tabindex="0" onclick="window.open('` + link + `','_blank')">` + linkTitle + `</p>
 				</div>
 			`
 		} else if strings.HasPrefix(t, "![") {
