@@ -42,7 +42,7 @@ func MDtoHTML(filename string)(string,error){
 	mainSec += `
 		<h1 class="titleHeader">` + ai.title + `</h1>
 		<div id="info">
-			<img class="avatar" src="" alt="">
+			<img class="avatar">
 			<p class="author tidy" tabindex="0" onclick="window.open('https://blog.gool.work/u/` + ai.author + `')">` + ai.author + `</p>
 			<p class="modified tidy">` + strconv.Itoa(y) + "-" + strconv.Itoa(int(m)) + "-" + strconv.Itoa(d) + `</p>
 			<img class="tagIcon" src="" alt="">
